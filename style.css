@@ -79,14 +79,13 @@ nav li a:hover {
   padding: 10px 33px;
   vertical-align: middle;
   cursor: pointer;
-  box-shadow: inset 0px 0px 6px rgba(255, 0, 0, 0.712);
+  box-shadow: 0px 0px 4px rgba(255, 0, 0, 0.712);
   text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.459);
+  transition: 0.2s;
 }
 .login-btn:hover {
   background-color: #ff3d3d;
   color: black;
-  box-shadow: none;
-  text-shadow: none;
 }
 
 span {
@@ -136,9 +135,7 @@ h1 {
   font-size: 84px;
   color: #000;
   margin-bottom: 24px;
-  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
-}
-h1 #text {
+  text-shadow: -6px 4px 10px rgba(0, 0, 0, 0.3);
 }
 h1 span {
   color: #c9180e;
@@ -158,13 +155,12 @@ h1 span {
   padding: 17px 66px;
   font-size: 20px;
   font-weight: 500;
-  box-shadow: inset 0px 0px 6px rgba(255, 0, 0, 0.712);
+  box-shadow: 0px 0px 6px rgba(255, 0, 0, 0.712);
   text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.459);
+  transition: 0.2s;
 }
 .lnd-view-menu-btn:hover {
   background-color: #ff2323;
-  box-shadow: none;
-  text-shadow: none;
 }
 
 .lnd-book-a-table-btn {
@@ -176,8 +172,9 @@ h1 span {
   padding: 17px 57px;
   font-size: 20px;
   font-weight: 500;
-  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.137);
+  box-shadow: 0px 0px 8px rgb(255, 255, 255);
   text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
 }
 .lnd-book-a-table-btn:hover {
   background-color: #f1f1f1;
@@ -249,4 +246,19 @@ h1 span {
 .review-stars:nth-child(5) {
   position: absolute;
   left: 96px;
+}
+
+.cart-status {
+  position: relative;
+}
+
+.cart-badge {
+  display: none;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 8px;
+}
+.cart-badge.active {
+  display: block;
 }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ramen Restaurant App</title>
+    <link
+      rel="shortcut icon"
+      href="img/steaming-bowl.svg"
+      type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,9 +16,8 @@
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link
-      rel="shortcut icon"
-      href="img/steaming-bowl.svg"
-      type="image/x-icon" />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   </head>
   <body>
     <header>
@@ -30,8 +33,8 @@
 
       <div class="nav-right">
         <div class="cart-status">
-          <img src="img/cart-icon.png" alt="" />
-          <img style="display: none" src="img/cart-noti-badge.svg" alt="" />
+          <img class="cart-icon" src="img/cart-icon.png" alt="" />
+          <img class="cart-badge" src="img/cart-noti-badge.svg" alt="" />
         </div>
         <button class="login-btn">
           <a href="#"
@@ -50,7 +53,9 @@
           <div class="lnd-btns">
             <a href="#"><button class="lnd-view-menu-btn">View Menu</button></a>
             <a href="#"
-              ><button class="lnd-book-a-table-btn">Book a Table</button></a
+              ><button id="booking" class="lnd-book-a-table-btn">
+                Book a Table
+              </button></a
             >
           </div>
 
@@ -101,6 +106,12 @@
 
     <footer></footer>
     <aside></aside>
+    <!-- Main JS -->
     <script src="script.js"></script>
+    <!-- Flatpickr calendar - Booking table -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr(".lnd-book-a-table-btn");
+    </script>
   </body>
 </html>
