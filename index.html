@@ -44,6 +44,13 @@
       </div>
     </header>
     <main>
+      <div class="booking-container">
+        <img
+          style="display: none"
+          src="img/curved-arrow.svg"
+          alt=""
+          class="pointing-arrow" />
+      </div>
       <div class="lnd-page">
         <div class="lnd-left-side">
           <h1>
@@ -52,11 +59,12 @@
 
           <div class="lnd-btns">
             <a href="#"><button class="lnd-view-menu-btn">View Menu</button></a>
-            <a href="#"
-              ><button id="booking" class="lnd-book-a-table-btn">
-                Book a Table
-              </button></a
-            >
+            <button
+              onclick="toggleBooking()"
+              id="booking"
+              class="lnd-book-a-table-btn">
+              Book a Table
+            </button>
           </div>
 
           <div class="lnd-reviews-group">
@@ -111,7 +119,7 @@
     <!-- Flatpickr calendar - Booking table -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-      flatpickr(".lnd-book-a-table-btn");
+      // flatpickr(".lnd-book-a-table-btn");
     </script>
   </body>
 </html>

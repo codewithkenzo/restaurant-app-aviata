@@ -155,12 +155,12 @@ h1 span {
   padding: 17px 66px;
   font-size: 20px;
   font-weight: 500;
-  box-shadow: 0px 0px 6px rgba(255, 0, 0, 0.712);
-  text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.459);
-  transition: 0.2s;
+  transition: 0.4s;
 }
 .lnd-view-menu-btn:hover {
   background-color: #ff2323;
+  box-shadow: 0px 0px 4px rgba(255, 0, 0, 0.712);
+  text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.459);
 }
 
 .lnd-book-a-table-btn {
@@ -179,7 +179,25 @@ h1 span {
 .lnd-book-a-table-btn:hover {
   background-color: #f1f1f1;
 }
-.lnd-reviews h3 {
+
+/* Booking CSS  */
+.booking-container {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  background-color: #ffffff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: -40px;
+  left: 580px;
+}
+.booking-container.active {
+  opacity: 1;
+  display: block;
+}
+
+/* End of booking CSS */
+.lnd-reviews {
   color: #000;
   font-weight: 600;
   margin-bottom: -4px;

@@ -1,7 +1,9 @@
 
 console.log('hi');
 let myBadge = document.querySelector('.cart-badge');
-let myCart = document.querySelector('.cart-icon')
+let myCart = document.querySelector('.cart-icon');
+let bookingContainer = document.querySelector('.booking-container');
+let displayBooking = 0;
 
 myCart.addEventListener("click", function() {
   myBadge.classList.add("active");
@@ -15,5 +17,17 @@ function checkIfActive() {
   } else {
     console.log("Class active has not been added");
     // do something else here if the class does not exist
+  }
+}
+
+function toggleBooking() {
+  if (displayBooking == 1) {
+    bookingContainer.classList.add('active')
+    console.log("display set to on");
+    displayBooking = 0
+  } else {
+    bookingContainer.classList.remove('active')
+    console.log("display set to off");
+    displayBooking = 1
   }
 }
