@@ -18,6 +18,10 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://npmcdn.com/flatpickr/dist/themes/material_red.css" />
   </head>
   <body>
     <header>
@@ -76,7 +80,28 @@
                   alt=""
                   class="pointing-arrow" />
 
-                <input type="text" />
+                <div class="booking-title-container">
+                  <h2 class="booking-title">Reservation</h2>
+                </div>
+                <div class="booking-inputs-container">
+                  <label for="time-picking">Date and hour:</label>
+                  <input
+                    placeholder="Click to pick a date & hour"
+                    type="datetime-local"
+                    name=""
+                    id="" />
+                  <label for="booking-table-name">Name:</label>
+                  <input
+                    type="text"
+                    placeholder="Type your name"
+                    name="type name" />
+                  <label for="booking-table-email">E-mail:</label>
+                  <input
+                    type="email"
+                    placeholder="Type your email"
+                    name="type name" />
+                  <button type="submit">Reserve a table</button>
+                </div>
               </div>
               <img class="review-stars" src="img/review-star.svg" alt="" />
               <img class="review-stars" src="img/review-star.svg" alt="" />
@@ -87,7 +112,7 @@
           </div>
         </div>
         <div class="lnd-right-side">
-          <img class="ramen-bowl" src="img/lnd-ramen.pnggg" alt="" />
+          <img class="ramen-bowl" src="img/lnd-ramen.png" alt="" />
         </div>
       </div>
       <div class="food-cards-container">
@@ -120,8 +145,14 @@
     <script src="script.js"></script>
     <!-- Flatpickr calendar - Booking table -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="module.js"></script>
     <script>
-      // flatpickr(".lnd-book-a-table-btn");
+      config = {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        plugins: [new confirmDatePlugin({ confirmText: "Done" })],
+      };
+      flatpickr("input[type=datetime-local]", config);
     </script>
   </body>
 </html>
