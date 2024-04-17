@@ -14,14 +14,18 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/plugins/confirmDate/confirmDate.css" />
+
+    <link
+      rel="stylesheet"
       type="text/css"
       href="https://npmcdn.com/flatpickr/dist/themes/material_red.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -75,7 +79,7 @@
             <div class="review-stars-container">
               <div class="booking-container">
                 <img
-                  style="display: none"
+                  style=""
                   src="img/curved-arrow.svg"
                   alt=""
                   class="pointing-arrow" />
@@ -97,6 +101,7 @@
                     name="type name" />
                   <label for="booking-table-email">E-mail:</label>
                   <input
+                    class="booking-email-input"
                     type="email"
                     placeholder="Type your email"
                     name="type name" />
@@ -145,12 +150,16 @@
     <script src="script.js"></script>
     <!-- Flatpickr calendar - Booking table -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script type="module" src="module.js"></script>
+    <script src="https://unpkg.com/flatpickr@4.6.9/dist/plugins/confirmDate/confirmDate.js"></script>
     <script>
       config = {
         enableTime: true,
-        dateFormat: "Y-m-d H:i",
-        plugins: [new confirmDatePlugin({ confirmText: "Done" })],
+        dateFormat: "d M y - H:i",
+        plugins: [new confirmDatePlugin({})],
+        confirmIcon: "<i class='fa fa-check'></i>", // your icon's html, if you wish to override
+        confirmText: "OK ",
+        showAlways: false,
+        theme: "material_red", // or "dark"
       };
       flatpickr("input[type=datetime-local]", config);
     </script>
