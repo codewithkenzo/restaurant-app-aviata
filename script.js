@@ -21,13 +21,13 @@ function checkIfActive() {
 }
 
 function toggleBooking() {
-  if (displayBooking == 1) {
+  if (displayBooking == 0) {
     bookingContainer.classList.add('active')
     console.log("display set to on");
-    displayBooking = 0
+    displayBooking = 1
   } else {
     bookingContainer.classList.remove('active')
     console.log("display set to off");
-    displayBooking = 1
+    displayBooking = 0
   }
 }
